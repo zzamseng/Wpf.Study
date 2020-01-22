@@ -1,0 +1,27 @@
+﻿<Window x:Class="DependencyPropertyTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DependencyPropertyTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Input Text: " Margin="0,0,30,0"/>
+            <TextBox x:Name="MyTextBox" Text="Test" TextChanged="MyTextBox_TextChanged" />
+            <!--<TextBox x:Name="MyTextBox" Text="Test"  />-->
+        </StackPanel>
+        <!--<Button Grid.Row="1" Margin="50,20,50,20" Content="Click" Click="Button_Click"/>-->
+        <Button Grid.Row="1" Margin="50,20,50,20" Content="Click"/>
+        <TextBlock Grid.Row="2" x:Name="OldValue" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="3" x:Name="NewValue" VerticalAlignment="Center" HorizontalAlignment="Center" />
+    </Grid>
+</Window>
